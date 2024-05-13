@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Rreth salus {% endblock %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<section class="aboutus" id="aboutus">
+<div class="about_us">
+
+  <div class="aboutsalus">
+    <div class="container">
+      <h2>{% trans "MIRËSEVINI NË SALUS" %}</h2>
+      {% for about in about %}
+  
+      <img src="{{ about.about_img.url }}" alt="Placeholder Image">
+      <p>{{ about.about_pershkrimi |safe}}</p>
+      <div class="oltipecini">
+        <p>{{about.about_oltipershkrimi |safe}}</p>
+        {% endfor %}
+    </div>
+    
+  </div>
+  </div>
+
+
+
+</div>
+</section>
+
+<div class="slider_klajdi">
+ <h3 style="text-align: center;">{% trans "Ambientet e Spitalit" %}</h3> 
+  <div class="container">
+      <div class="slider-container">
+          <div class="slider">
+            {% for foto in foto %}
+              <div class="slide">
+                  <img src="{{ foto.foto_img.url}}" alt="Image 1" class="slide-image">
+              </div>
+            {% endfor %}
+              
+              <!-- Add more slide divs for additional images -->
+          </div>
+          <button class="prev">&lt;</button>
+          <button class="next">&gt;</button>
+      </div>
+  
+      <div class="popup-container">
+          <div class="popup">
+              <span class="close">&times;</span>
+              <img src="" alt="Popup Image" class="popup-image">
+          </div>
+      </div>
+  </div>
+  </div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+{% endblock content%}

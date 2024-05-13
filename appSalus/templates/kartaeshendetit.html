@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Karta e Shëndetit {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+{% load i18n %}
+{% block content %}
+<section class="kartaeshendetit">
+<div class="container">
+    
+    <img src="{% static 'img/Group 145.jpg' %}" alt="">
+                <img src="{% static 'img/Group 146.jpg' %}" alt="">
+                <img src="{% static 'img/Group 147.jpg' %}" alt="">
+                <img src="{% static 'img/Group 148.jpg' %}" alt="">
+        </div>
+       
+       
+        
+
+</section>
+
+
+
+<section class="artinfo" id="artinfo">
+        <div class="container">
+    {% for artikujtinformuesKartaInSalus in artikuj_informues_KartaInSalus %}
+          <a href="{% url 'artikujt_informuesInSalus' artikujtinformuesKartaInSalus.id %}" class="card">
+            <img src="{{artikujtinformuesKartaInSalus.image.url}}" alt="Placeholder Image">
+            <div class="card-content">
+              <h3>{{artikujtinformuesKartaInSalus.name}}</h3>
+            </div>
+          </a>
+    {% endfor %}  
+          <!-- Add more cards here -->
+        </div>
+      </section>
+  
+{% endblock content %}

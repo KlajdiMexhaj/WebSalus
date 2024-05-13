@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Mjekët {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+{% load i18n %}
+{% block content %}
+<section class="AEMC">
+<div class="container">
+<h1 id="AEMC" style="color: #1A355E;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 444.7 444.7" style="enable-background:new 0 0 444.7 444.7;" xml:space="preserve">
+  <style type="text/css">
+    .st0{fill:#1A355E;}
+  </style>
+  <path class="st0" d="M433.3,199.5v-46.7H293V12.5h-46.7v140.2h-46.7V12.5h-46.7v140.2H12.5v46.7h140.2v46.7H12.5V293h140.2v140.2  h46.7V293h46.7v140.2H293V293h140.2v-46.7H293v-46.7H433.3z M246.3,246.3h-46.7v-46.7h46.7V246.3z"></path>
+  </svg>{% trans "QENDRA AERO-MJEKËSORE (AEMC)" %}</h1>
+</div>
+<div class="container">
+    
+    {% for aemc in aemc %}
+    <div class="AEMC_desctiption">
+        <p>{{aemc.AeMC_text |safe}}</p>
+         <div class="collapsible">
+		<input type="checkbox" id="collapsible-head">
+		<label for="collapsible-head"><i class="fa-solid fa-caret-right"></i>{% trans "Kliko këtu për CV e Mjekes Dr. Vincenza Indelicato" %}</label>
+		<div class="collapsible-text">
+			<p>{{aemc.AeMC_CV |safe}}</p>
+		</div>
+	</div>
+    </div>
+   
+    {% endfor %}
+    
+    <div class="AEMC_img">
+        <img src="{% static 'img/AeMC.jpg' %}" class="img-fluid" alt="...">
+    </div>
+
+    
+</div>
+
+
+
+</section>
+
+<!-- <div class="video-containerr">
+  {% for artikujtinformuesAeMC in artikujt_informues_AeMC %}
+  <div class="videoo">
+    <h3>{{ artikujtinformuesAeMC.name }}</h3>
+  </div>
+ {% endfor %}
+  
+</div> -->
+
+<section class="artinfo" id="artinfo">
+  <div class="container">
+    {% for artikujtinformuesAeMC in artikujt_informues_AeMC %}
+    <a href="{% url 'artikujt_informuesAeMC' artikujtinformuesAeMC.id %}" class="card">
+      <img src="{{artikujtinformuesAeMC.image.url}}" alt="Placeholder Image">
+      <div class="card-content">
+        <h3>{{ artikujtinformuesAeMC.name }}</h3>
+        
+      </div>
+    </a>
+    {% endfor %}
+    <!-- Add more cards here -->
+  </div>
+</section>
+
+
+{% endblock content%}

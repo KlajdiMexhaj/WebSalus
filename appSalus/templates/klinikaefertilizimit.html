@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %} 
+{% include 'base/navbar.html' %}
+{% block title %} Mjekët {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+{% load i18n %}
+{% block content %}
+
+ <h1 id="titullklinika"># {% trans "KLINIKA E FERTILIZIMIT" %}</h1>
+<parent id="parent" class="parent">
+  {% for klinikaferti in klinikaferti %}
+  
+
+      <!-- <div class="card" >
+          <img src="{{ klinikaferti.klinika_img.url}}" class="card-img-top " alt="">
+          <div class="card-body">
+           <a href="{% url 'klinikaferte_detail' klinikaferti.id  %}">   <h5 class="card-title">{{klinikaferti.klinika_name}}</h5></a>
+          </div>
+        </div> -->
+
+
+        <div  class="mjeket_alla">
+          <a href="{% url 'klinikaferte_detail' klinikaferti.id  %}" class="card-link">
+            <div class="card" >
+              <img src="{{ klinikaferti.klinika_img.url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{klinikaferti.klinika_name}}</h5>
+                
+              </div>
+            </div>
+          </a>
+        </div>
+  {% endfor %}
+</parent>
+
+
+<section class="aboutklinika">
+  <div class="aboutklinika-content">
+    <div class="image-containerr">
+      <img src="{% static 'img/Team-2.png' %}" alt="Donna Salus Klinika">
+    </div>
+    <div class="text-container">
+      <h2>{% trans "Rreth Nesh" %}</h2>
+      <p>{% trans "Donna Salus është një klinikë që ofron kujdes mjekësor të nivelit më të lartë. Shërbimet tona mbulojnë një spektër të gjerë: nga këshillimi dhe vizitat tek mbështetja aktive në trajtimin e infertilitetit dhe diagnostikimin gjenetik. Ne punojmë në mënyrë transparente, precize, duke përdorur teknikat mjekësore më moderne dhe mbi të gjitha me një qasje absolutisht individuale ndaj pacientit." %}</p>
+      <p>{% trans "Ekipi i Klinikës të Fertilitetit Donna Salus përbëhet nga një staf italo-shqiptar me në krye mjekun e mirënjohur të mjekësisë riprodhuese, Dr. Bruno Engl, me eksperience 40 vjeçare, i cili prej vitit 2004 është drejtues mjekësor i spitaleve Brunico dhe San Candido, ku ndër të tjera është themelues i një nga qendrave kryesore të mjekësisë riprodhuese në Itali." %}</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="artinfo" id="artinfo">
+  <div class="container">
+    {% for artikujtinformuesDonnaSalus in artikujt_informues_DonnaSalus %}
+    <a href="{% url 'artikujt_informuesDonnaSalus' artikujtinformuesDonnaSalus.id %}" class="card">
+      <img src="{{artikujtinformuesDonnaSalus.image.url}}" alt="Placeholder Image">
+      <div class="card-content">
+        <h3>{{artikujtinformuesDonnaSalus.name}}</h3>
+        
+      </div>
+    </a>
+
+
+    
+    {% endfor %}
+    <!-- Add more cards here -->
+  </div>
+</section>
+
+
+
+
+
+{% endblock content%}

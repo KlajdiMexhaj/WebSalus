@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Artikujt Informues {% endblock %}
+{% load static %}
+
+{% block content %}
+
+<br><br>
+
+<div class="artikujtinfosingle">
+  <div class="container">
+    <h1>{{ artikujt_informuesDonnaSalus.name}}</h1>
+    <img src="{{ artikujt_informuesDonnaSalus.image.url}}" alt="">
+    <p> {{ artikujt_informuesDonnaSalus.art_DonnaSalus |safe}}</p>
+  </div>
+</div>  
+
+<br><br>
+
+
+{% endblock content%}

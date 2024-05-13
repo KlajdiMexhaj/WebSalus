@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Klinika e Fertilizimit {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+{% block content %}
+
+<div class="klinika_detail" >
+<h1> #{{ klinikaferte_detail.klinika_name}}</h1>
+<p>{{ klinikaferte_detail.klinika_description |safe}}</p>
+</div>
+
+
+
+
+
+{% endblock content %}

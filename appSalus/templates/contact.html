@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Kontakt {% endblock %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>{% trans "Spitali SALUS Tiranë" %}</h2>
+        <p>{% trans "Spitali SALUS Tiranë" %}</p>
+      </div>
+    </div>
+<!--Google map-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.362078080526!2d19.7595897765985!3d41.344483098654564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031dfaad0f107%3A0x137b1b01df32e581!2sSALUS%20Spitali%20Italian%20-%20Tirana!5e0!3m2!1sen!2s!4v1705749974991!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+  <div class="container">
+    <div class="row mt-5">
+
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>{% trans "Vendodhja:" %}</h4>
+            <p>{% trans "Rruga" %} "Vidhe Gjata" 16, Mëzez-Kashar,
+                Autostrada TR-DR, Tirana, Albania</p>
+          </div>
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <a href="mailto:info@salus.al"><p>info@salus.al</p></a>
+          </div>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Telefono:</h4>
+            <a href="tel:+355 68 205 3180"><p>+355 68 205 3180​</p></a>
+            <a href="tel:+355 42 390 500"><p>+355 42 390 500​</p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <form action="" role="form" class="php-email-form">
+        {% csrf_token %}
+           
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="nameKontactTirana_contact" class="form-control" id="nameKontactTirana_contact" placeholder="{% trans 'Emer Mbiemer' %}" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" name="telKontactTirana_contact" id="telKontactTirana_contact" placeholder="{% trans 'Numër Telefoni' %}" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="email" class="form-control" name="emailKontactTirana_contact" id="emailKontactTirana_contact" placeholder="Email" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="messageKontactTirana_contact" id="messageKontactTirana_contact" rows="5" placeholder="{% trans 'Shqetësimi juaj' %}" required></textarea>
+          </div>
+          <div class="text-center"><button type="submit">{% trans "Dergo"%}</button></div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  <br><br><br><br>
+
+
+  <div class="section-title">
+    <h2>{% trans "Laboratori SALUS" %}</h2>
+    <p>{% trans "Laboratori SALUS" %}</p>
+  </div>
+</div>
+<!--Google map-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.99730215409!2d19.818096190606266!3d41.33067202553847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503111a0dc41f3%3A0x51d3f259daeab40a!2sLaboratori%20i%20analizave%20Salus!5e0!3m2!1sen!2s!4v1709556978488!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="container">
+<div class="row mt-5">
+
+  <div class="col-lg-4">
+    <div class="info">
+      <div class="address">
+        <i class="bi bi-geo-alt"></i>
+        <h4>{% trans "Vendodhja:" %}</h4>
+        <p>{% trans "Rruga Qemal Stafa 51, pranë shkollës Fan Noli, 100m mbi Ambulancën Qëndrore, Tiranë" %}</p>
+      </div>
+
+      <div class="email">
+        <i class="bi bi-envelope"></i>
+        <h4>Email:</h4>
+        <a href="mailto:info@salus.al"><p>info@salus.al</p></a>
+      </div>
+
+      <div class="phone">
+        <i class="bi bi-phone"></i>
+        <h4>Telefono:</h4>
+        <a href="tel:+355 68 20 53 180"><p>+355 68 20 53 180​</p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-8 mt-5 mt-lg-0">
+    <form action="" role="form" class="php-email-form">
+      {% csrf_token %}
+
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <input type="text" name="nameLaboratoriSalus" class="form-control" id="nameLaboratoriSalus" placeholder="{% trans 'Emer Mbiemer' %}" required>
+        </div>
+        <div class="col-md-6 form-group mt-3 mt-md-0">
+          <input type="text" class="form-control" name="telLaboratoriSalus" id="telLaboratoriSalus" placeholder="{% trans 'Numër Telefoni' %}" required>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <input type="email" class="form-control" name="emailLaboratoriSalus" id="emailLaboratoriSalus" placeholder="Email" required>
+      </div>
+      <div class="form-group mt-3">
+        <textarea class="form-control" name="messageLaboratoriSalus" id="messageLaboratoriSalus" rows="5" placeholder="{% trans 'Shqetësimi juaj' %}" required></textarea>
+      </div>
+      <div class="text-center"><button type="submit">{% trans "Dergo" %}</button></div>
+    </form>
+
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<br><br><br><br>
+
+
+<div class="section-title">
+    <h2>{% trans "Klinika DURRËS" %}</h2>
+    <p>{% trans "Klinika DURRËS" %}</p>
+  </div>
+</div>
+<!--Google map-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1053.185336354123!2d19.44991138520371!3d41.31244086574261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9c60ebf3b19601%3A0xc764db67357e6f4f!2sKlinika%20Durr%C3%ABs%20SALUS!5e0!3m2!1sen!2s!4v1709556609322!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="container">
+<div class="row mt-5">
+
+  <div class="col-lg-4">
+    <div class="info">
+      <div class="address">
+        <i class="bi bi-geo-alt"></i>
+        <h4>{% trans "Vendodhja:" %}</h4>
+        <p>{% trans "Lagjia nr.4, Rruga 7 Marsi Pallati Firma Valoti, Kulla I-rë, Pranë Drejtorisë së Hekurudhës, Durrës." %}</p>
+      </div>
+
+      <div class="email">
+        <i class="bi bi-envelope"></i>
+        <h4>Email:</h4>
+        <a href="mailto:info@salus.al"><p>info@salus.al</p></a>
+      </div>
+
+      <div class="phone">
+        <i class="bi bi-phone"></i>
+        <h4>Telefono:</h4>
+        <a href="tel:+355 683 1780"><p>+355 68 803 1780​</p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-8 mt-5 mt-lg-0">
+    <form action="" role="form" class="php-email-form">
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <input type="text" name="name" class="form-control" id="name" placeholder="{% trans 'Emer Mbiemer' %}" required>
+        </div>
+        <div class="col-md-6 form-group mt-3 mt-md-0">
+          <input type="text" class="form-control" name="email" id="email" placeholder="{% trans 'Numër Telefoni' %}" required>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <input type="email" class="form-control" name="subject" id="subject" placeholder="Email" required>
+      </div>
+      <div class="form-group mt-3">
+        <textarea class="form-control" name="message" rows="5" placeholder="{% trans 'Shqetësimi juaj' %}" required></textarea>
+      </div>
+      <div class="text-center"><button type="submit">{% trans "Dergo" %}</button></div>
+    </form>
+
+  </div>
+
+</div>
+
+</div>
+
+
+<br><br><br><br>
+
+
+<div class="section-title">
+    <h2>{% trans "Klinika Salus SHKODËR" %}</h2>
+    <p>{% trans "Klinika Salus SHKODËR" %}</p>
+  </div>
+</div>
+<!--Google map-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2962.010241596576!2d19.50775857659144!3d42.064399853728645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134e011fa385a8bb%3A0x7239d411c76149b!2sSalus%20Shkoder!5e0!3m2!1sen!2s!4v1713339058833!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="container">
+<div class="row mt-5">
+
+  <div class="col-lg-4">
+    <div class="info">
+      <div class="address">
+        <i class="bi bi-geo-alt"></i>
+        <h4>{% trans "Vendodhja" %}:</h4>
+        <p>{% trans "Rruga 13 Dhjetori, Nr.19 pranë bashkisë Shkodër" %}</p>
+      </div>
+
+      <div class="email">
+        <i class="bi bi-envelope"></i>
+        <h4>Email:</h4>
+        <a href="mailto:info@salus.al"><p>info@salus.al</p></a>
+      </div>
+
+      <div class="phone">
+        <i class="bi bi-phone"></i>
+        <h4>Telefono:</h4>
+        <a href="tel:+355 68 905 3011"><p>+355 68 905 3011​</p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-8 mt-5 mt-lg-0">
+    <form action="" role="form" class="php-email-form">
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <input type="text" name="name" class="form-control" id="name" placeholder="{% trans 'Emer Mbiemer' %}" required>
+        </div>
+        <div class="col-md-6 form-group mt-3 mt-md-0">
+          <input type="text" class="form-control" name="email" id="email" placeholder="{% trans 'Numër Telefoni' %}" required>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <input type="email" class="form-control" name="subject" id="subject" placeholder="Email" required>
+      </div>
+      <div class="form-group mt-3">
+        <textarea class="form-control" name="message" rows="5" placeholder="{% trans 'Shqetësimi juaj' %}" required></textarea>
+      </div>
+      <div class="text-center"><button type="submit">{% trans "Dergo" %}</button></div>
+    </form>
+
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+</section><!-- End Contact Section -->
+    
+
+{% endblock content %}

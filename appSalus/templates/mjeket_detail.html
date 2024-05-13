@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Mjekët {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+
+
+{% block content %}
+
+
+
+<div class="mjeket_singledetail">
+  <div class="container">
+      <div class="image-containerr">
+          <img src="{{ mjeket_detail.mjeket_image.url}}" alt="Image">
+      </div>
+      <div class="content">
+          <h1 class="emrimjekut">{{mjeket_detail.name}}</h1>
+          <h4 class="depimjekut">Departmenti:{{mjeket_detail.departamenti}}</h4>
+          
+          <!-- Placeholder for the video -->
+          <div class="video-placeholder">
+              {% video mjeket_detail.mjeket_video 'small' %}
+          </div>
+          <!-- <button type="button" class="btn btn-outline-primary">Kontakto me {{mjeket_detail.name}}</button> -->
+          
+          <p>{{mjeket_detail.mjeket_arsimi|safe}}</p>
+          <p>{{mjeket_detail.mjeket_punesimi|safe}}</p>
+      </div>
+  </div>
+</div>
+
+<br>
+
+{% endblock content %}

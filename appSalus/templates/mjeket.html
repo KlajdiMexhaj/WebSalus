@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Mjekët {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+{% load i18n %}
+{% block content %}
+
+<section class="allmjeket">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 444.7 444.7" style="enable-background:new 0 0 444.7 444.7;" xml:space="preserve">
+              <style type="text/css">
+                .st0{fill:#1A355E;}
+              </style>
+              <path class="st0" d="M433.3,199.5v-46.7H293V12.5h-46.7v140.2h-46.7V12.5h-46.7v140.2H12.5v46.7h140.2v46.7H12.5V293h140.2v140.2  h46.7V293h46.7v140.2H293V293h140.2v-46.7H293v-46.7H433.3z M246.3,246.3h-46.7v-46.7h46.7V246.3z"></path>
+              </svg>{% trans "Mjeket" %}</h4>
+<br>
+
+          <div class="box-mjeket">
+            
+              
+              <!-- <a href="{% url 'mjeket' %}"class="list-group-item list-group-item-action">All</a> -->
+            
+             
+            <!-- <div class="list-group">
+              
+                
+            <a href="{% url 'mjeket' %}?q={{departament.name}}" class="list-group-item list-group-item-action">{{departament.name}}</a>
+            
+          
+          </div> -->
+          <div class="dropdown" style="color: #1A355E !important;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {% trans "Filtro 30 departamente" %}
+            </button>
+            <ul class="dropdown-menu">
+{% for departament in departamenti %}  
+              <li><a class="dropdown-item" href="{% url 'mjeket' %}?q={{departament.name}}">{{departament.name}}</a></li>
+{% endfor %}
+            </ul>
+          </div>
+         
+            
+          </div>
+          </div>       
+            <div class="col-md-9 ">
+              <div class="row">
+
+              
+            {% for mjeket in mjeket %}
+            <div class="col-md-4 py-3">
+
+                <!-- <div class="card" >
+                  <a href="{% url 'mjeket_detail' mjeket.id  %}">
+                    <img src="{{ mjeket.mjeket_image.url}}" class="card-img-top " alt="">
+                  </a>
+                    <div class="card-body">
+                     <a href="{% url 'mjeket_detail' mjeket.id  %}">   <h5 class="card-title">{{mjeket.name}}</h5></a>
+                      <p class="card-text">{{mjeket.departamenti}}</p>
+                    </div>
+                  </div> -->
+
+
+
+                  <div  class="mjeket_all">
+                    <a href="{% url 'mjeket_detail' mjeket.id  %}" class="card-link">
+                      <div class="card" style="width: 18rem;">
+                        <img src="{{ mjeket.mjeket_image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{mjeket.name}}</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">{{mjeket.departamenti}}</h6>
+                          
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+
+
+            </div>   
+            {% endfor %}
+        </div>
+    </div>
+</div>
+            </div>
+
+</section>
+
+
+
+{% endblock content%}  
+

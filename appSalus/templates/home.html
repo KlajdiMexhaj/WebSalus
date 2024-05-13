@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Home {% endblock %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+  <!-- ======= Home Section ======= -->
+
+
+  
+
+<section id="home" class="d-flex flex-column">
+  
+   <a href="{% url 'kartaeshendetit' %}"class="image-container"></a> 
+  
+  
+  <div class="container">
+    <a href="tel:+355682053180" class="btn-get-started scrollto"><i class="fa-solid fa-phone">+355 68 205 3180</i></a>
+    <a href="tel:+35542390500" class="btn-get-started scrollto"><i class="fa-solid fa-phone">+355 42 390 500</i></a>
+    <br><br><br><br>
+    
+    <h1 class="titullipare">  <div class="language-container">
+
+       <!-- <a href="/sq/" ><img src="{% static 'img/images.png' %}" alt="Albanian Flag" class="language-flag"></a>  -->
+    
+      <a href="/en/" ><img src="{% static 'img/Flag_of_the_United_Kingdom_(3-5).svg.png' %}" alt="English Flag" class="language-flag"></a>
+    
+      <a href="/it/" ><img src="{% static 'img/Flag_of_Italy.svg.png' %}" alt="Italian Flag" class="language-flag"></a>
+    
+    </div><span class="changecontent"></span> </h1>
+   
+
+
+   <div class="changetext">
+    </span>
+   </div>
+
+    
+  </div>
+
+  <div class="video-background">
+    <video autoplay loop muted playsinline class="background-clip">
+      <source src="{% static 'img/Landpage-video-color.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+</section><!-- End Home -->
+
+  <main id="main">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+<a href="{% url 'checkup' %}" >
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="title">{% trans "Check-upp" %}</h4>
+              <p class="description">{% trans "Check up ne spitalin Salus." %} <br> {% trans "Kliko per ofertat ne Spitalin Salus"%} &raquo; 
+              <br>   <br> </p>
+            </div>
+</a>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+           <a href="{% url 'mjeket' %}"> 
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="fa-solid fa-user-doctor"></i></div>
+              <h4 class="title">{% trans "Mjekët tane"%}</h4>
+              <p class="description">{% trans "Mjekët tanë në Spitalin Salus." %} <br> {% trans "Kliko per mjekët ne Spitalin Salus"%} &raquo;
+              <br><br></p>
+            </div>
+</a>
+          </div>
+          
+          
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <a href="{% url 'specialitet' %}">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
+              <h4 class="title">{% trans "Departamentet "%}</h4>
+              <p class="description">{% trans "Departamentet ne spitalin Salus."%} <br> {% trans "Kliko per departamentet ne Spitalin Salus"%} &raquo;</p>
+            </div>
+            </a>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <a href="{% url 'artikuj_informues' %}">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+              <h4 class="title">{% trans "Artikujt Informues" %}</h4>
+              <p class="description">{% trans "Artikujt Informues ne spitalin Salus."%} <br> {% trans "Kliko per artikujt ne Spitalin Salus"%} &raquo;</p>
+            </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <a href="{% url 'kartaeshendetit' %}">
+          <h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 444.7 444.7" style="enable-background:new 0 0 444.7 444.7;" xml:space="preserve">
+            <style type="text/css">
+              .st0{fill:#1A355E;}
+            </style>
+            <path class="st0" d="M433.3,199.5v-46.7H293V12.5h-46.7v140.2h-46.7V12.5h-46.7v140.2H12.5v46.7h140.2v46.7H12.5V293h140.2v140.2  h46.7V293h46.7v140.2H293V293h140.2v-46.7H293v-46.7H433.3z M246.3,246.3h-46.7v-46.7h46.7V246.3z"></path>
+            </svg>{% trans "Rreth Saluss" %}</h2></a>
+          <p>{% trans "Shërbimet kryhen nga mjekë italianë dhe mjekë shqiptarë të formuar në Itali dhe në vende të ndryshme të Europës,sipas standardeve klinike ndërkombëtare, duke përdorur teknikat operatore më të sofistikuara, duke perdorur pajisje dhe mjete gjithnjë avangarde. Në këtë mënyrë, Spitali Salus i garanton pacientit një procedurë diagnostikimi të sigurt dhe trajtimi  efikas për çdo patologjie të hasur." %}</p>
+        </div>
+
+    <div class="row">
+    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
+     align-items-stretch position-relative">
+    <a href="https://www.youtube.com/watch?v=VbJmTVW3DLY" class="glightbox play-btn mb-4"></a>
+          </div>
+
+    <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
+     justify-content-center py-5 px-lg-5">
+            
+            <div class="icon-box">
+<a href="{% url 'kartaeshendetit' %}">
+              <div class="icon"><i class="bx bx-heart"></i></div>
+              <h4 class="title">{% trans "JETO SHENDETSHEM"%}</h4>
+              <p class="description" style="color: #1A355E;">{% trans "Për të qenë më pranë pacientëve, për t’ju siguruar një akses sa më të lehtë dhe shërbim të përsonalizuar, Spitali Salus ofron kartën e Besueshmërisë “inSalus”.Karta jonë e shëndetit është inovacioni më i fundit i shërbimeve shëndetësore në Spitalin SALUS." %} </p>
+            </a>
+            </div>
+
+            <div class="icon-box">
+<a href="{% url 'kartaeshendetit' %}">
+              <div class="icon"><i class="bx bx-health"></i></div>
+              <h4 class="title">{% trans "ME KARTEN" %}</h4>
+              <p class="description" style="color: #1A355E;">{% trans "Duke u bërë anëtar i kartës InSALUS, shërbimet që ju përfitoni për shëndetin tuaj janë të një standarti të lartë." %}</p>
+            </a>
+            </div>
+
+            <div class="icon-box"><a href="{% url 'kartaeshendetit' %}">
+              <div class="icon"><i class="bx bx-help-circle"></i></div>
+              <h4 class="title">{% trans "IN SALUS" %} </h4>
+              <p class="description" style="color: #1A355E;">{% trans "Nisur nga mjeku i dedikuar për shëndetin tuaj, me një përkujdesje të personalizuar për të parandaluar çdo patologji shëndetësore, diagnostikimi i sëmundjeve jetëkërcënuese e deri tek ndërhyrjet kirurgjikale." %}</p>
+            </a></div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Counts Section ======= -->
+   <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row no-gutters">
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-user-md"></i>
+            <span data-purecounter-start="0" data-purecounter-end="82" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>{% trans "Mjekët" %}</strong> {% trans "në Spitalin SALUS" %}</p>
+            <a href="{% url 'mjeket' %}">{% trans "Meso me shume" %} &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="far fa-hospital"></i>
+            <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>{% trans "Departamente" %}</strong> {% trans "në Spitalin SALUS" %}</p>
+            <a href="{% url 'specialitet' %}">{% trans "Meso me shume" %} &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-flask"></i>
+            <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>{% trans "Laborator Biokimik" %}</strong> {% trans "në Spitalin SALUS" %}</p>
+            <a href="{% url 'about' %}">{% trans "Meso me shume" %} &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-award"></i>
+            <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>{% trans "Arritjet" %}</strong> {% trans "në Spitalin SALUS" %}</p>
+            <a href="{% url 'about' %}">{% trans "Meso me shume" %} &raquo;</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <a href="{% url 'checkup' %}">
+          <h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 444.7 444.7" style="enable-background:new 0 0 444.7 444.7;" xml:space="preserve">
+            <style type="text/css">
+              .st0{fill:#1A355E;}
+            </style>
+            <path class="st0" d="M433.3,199.5v-46.7H293V12.5h-46.7v140.2h-46.7V12.5h-46.7v140.2H12.5v46.7h140.2v46.7H12.5V293h140.2v140.2  h46.7V293h46.7v140.2H293V293h140.2v-46.7H293v-46.7H433.3z M246.3,246.3h-46.7v-46.7h46.7V246.3z"></path>
+            </svg>{% trans "CHECK-UP" %}</h2></a>
+                 </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <a href="{% url 'checkup' %}">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4>{% trans "Check Up Kardiologjik" %} </h4>
+              <p>{% trans "Kliko per ofertat" %}&raquo;</p>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <a href="{% url 'checkup' %}">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4>{% trans "Paketa e varësisë patologjike" %} </h4>
+              <p>{% trans "Kliko per ofertat" %}&raquo;</p>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <a href="{% url 'checkup' %}">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-eye"></i></div>
+              <h4>{% trans "Check Up Okulistik" %} </h4>
+              <p>{% trans "Kliko per ofertat" %}&raquo;</p>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <a href="{% url 'checkup' %}">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-child"></i></div>
+              <h4>{% trans "Skaner Trupi" %} </h4>
+              <p>{% trans "Kliko per ofertat" %}&raquo;</p>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <a href="{% url 'checkup' %}">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-venus-mars"></i></div>
+              <h4>{% trans "Paketat gjinekologjike" %}</h4>
+              <p>{% trans "Kliko per ofertat" %}&raquo;</p>
+            </div>
+            </a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <a href="{% url 'checkup' %}">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-notes-medical"></i></div>
+              <h4>{% trans "Check Up i përgjithshëm" %} </h4>
+              <p>{% trans "Kliko per ofertat" %}&raquo;</p>
+            </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+    
+   
+
+
+
+
+
+
+
+
+<!-- ======= MJEKET SECTION ======= -->
+<section class="allmjekethome" >
+  <div id="allmjeket">
+    <div class="section-title">
+      <a href="{% url 'mjeket' %}">
+    <h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 444.7 444.7" style="enable-background:new 0 0 444.7 444.7;" xml:space="preserve">
+      <style type="text/css">
+        .st0{fill:#1A355E;}
+      </style>
+      <path class="st0" d="M433.3,199.5v-46.7H293V12.5h-46.7v140.2h-46.7V12.5h-46.7v140.2H12.5v46.7h140.2v46.7H12.5V293h140.2v140.2  h46.7V293h46.7v140.2H293V293h140.2v-46.7H293v-46.7H433.3z M246.3,246.3h-46.7v-46.7h46.7V246.3z"></path>
+      </svg>{% trans "MJEKËT" %}</h2></a>
+    
+  </div>
+<div class="container">
+ 
+      <div class="content">
+                <p><br><strong>{% trans "Staf mjekësor i kualifikuar" %}</strong> <br> <br>
+                  {% trans "Struktura mjekesore përbehet nga mjekë italianë dhe shqiptarë të formuar në Itali e në vende të ndryshme të Europës, sipas standardeve klinike ndërkombëtare, duke përdorur teknikat operatore më të sofistikuara, të cilet respektojnë pacientin duke u mbështetur në pajisje dhe mjete gjithnjë avangarde. Mjeket tanë kujdesen që të ofrojnë shërbime shëndetësore mjaft komplekse dhe efikase shkencërisht të provuara, duke zënë në këtë fushë vendin e një strukture ekselence në territorin shqiptar.Mjeket tanë ofrojnë shërbime shëndetësore që synojnë të garantojnë parandalimin, diagnostikimin dhe riaftësimin e pacientit." %} </p>
+              </div>
+              <div class="slider-container">
+                <div class="slider">
+               {% for mjeket_obj in prof_mjeket %}
+    
+<div  class="mjeket_all">
+  <a href="{% url 'mjeket_detail' mjeket_obj.id  %}" class="card-link">
+    <div class="card" style="width: 18rem;">
+      <img src="{{ mjeket_obj.mjeket_image.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{mjeket_obj.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{mjeket_obj.departamenti}}</h6>
+        
+      </div>
+    </div>
+</a>
+</div>
+{% endfor %}   
+                  
+                
+                  
+</div>
+</div>
+</section>
+<!-- End MJEKET SECTION -->
+
+
+
+
+
+
+  
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <a href="{% url 'contact' %}">
+          <h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 444.7 444.7" style="enable-background:new 0 0 444.7 444.7;" xml:space="preserve">
+            <style type="text/css">
+              .st0{fill:#1A355E;}
+            </style>
+            <path class="st0" d="M433.3,199.5v-46.7H293V12.5h-46.7v140.2h-46.7V12.5h-46.7v140.2H12.5v46.7h140.2v46.7H12.5V293h140.2v140.2  h46.7V293h46.7v140.2H293V293h140.2v-46.7H293v-46.7H433.3z M246.3,246.3h-46.7v-46.7h46.7V246.3z"></path>
+            </svg>{% trans "Kontakt" %}</h2></a>
+          <p>{% trans "Spitali SALUS Tiranë" %}</p>
+        </div>
+      </div>
+
+      <!--Google map-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.362078080526!2d19.7595897765985!3d41.344483098654564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031dfaad0f107%3A0x137b1b01df32e581!2sSALUS%20Spitali%20Italian%20-%20Tirana!5e0!3m2!1sen!2s!4v1705749974991!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>{% trans "Vendodhja:" %}</h4>
+                <p>{% trans "Rruga" %} "Vidhe Gjata" 16, Mëzez-Kashar, Autostrada TR-DR, Tirana, Albania" </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email: </h4>
+                <a href="mailto:info@salus.al"><p>info@salus.al</p></a>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Telefono:</h4>
+                <a href="tel:+355 68 205 3180"><p>+355 68 205 3180​</p></a>
+                <a href="tel:+355 42 390 500"><p>+355 42 390 500​</p></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form action="" method="POST" role="form" class="php-email-form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="nameKontactTirana" class="form-control" id="nameKontactTirana" placeholder="{% trans 'Vendos Emrin dhe Mbiemerin' %}" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                 <input type="text" class="form-control" name="telKontactTirana" id="telKontactTirana" placeholder="{% trans 'Vendos Numbrin e Telefonit' %}" required> 
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                
+                <input type="email" class="form-control" name="emailKontactTirana" id="emailKontactTirana" placeholder="{% trans 'Vendos Email' %}" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="messageKontactTirana"  id="messageKontactTirana" rows="5" placeholder="{% trans 'Vendos Mesazh' %}" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit">{% trans "Dergo" %}</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+    
+
+
+
+
+
+    
+{% endblock content %}

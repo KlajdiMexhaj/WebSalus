@@ -1,0 +1,625 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-26 11:46+0200\n"
+"PO-Revision-Date: 2024-04-26 11:53+0000\n"
+"Last-Translator:   <rrrr@rrr.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\Salus\settings.py:144
+msgid "Albanian"
+msgstr "albanian"
+
+#: .\Salus\settings.py:145
+msgid "English"
+msgstr "english"
+
+#: .\Salus\settings.py:146
+msgid "Italy"
+msgstr "italy"
+
+#: .\appSalus\models.py:144
+msgid "name"
+msgstr "Name"
+
+#: .\appSalus\models.py:145
+msgid "art_KartaInSalus"
+msgstr "Descriptions"
+
+#: .\appSalus\templates\AeMC.html:15
+msgid "QENDRA AERO-MJEKËSORE (AEMC)"
+msgstr "AERO-MEDICAL CENTER (AEMC)"
+
+#: .\appSalus\templates\AeMC.html:24
+msgid "Kliko këtu për CV e Mjekes Dr. Vincenza Indelicato"
+msgstr "Click here for the CV of Doctor Dr. Vincenza Indelicato"
+
+#: .\appSalus\templates\about.html:12
+msgid "MIRËSEVINI NË SALUS"
+msgstr "WELCOME TO SALUS"
+
+#: .\appSalus\templates\about.html:31
+msgid "Ambientet e Spitalit"
+msgstr "Hospital premises"
+
+#: .\appSalus\templates\artikujtinformues.html:16
+msgid "ARTIKUJT INFORMUES"
+msgstr "INFORMATIONAL ARTICLES"
+
+#: .\appSalus\templates\artinfodetail.html:14
+msgid "Departmenti"
+msgstr "Department"
+
+#: .\appSalus\templates\base\footer.html:33
+msgid "Spitali Italian Salus"
+msgstr "Salus Italian Hospital"
+
+#: .\appSalus\templates\base\footer.html:34
+#: .\appSalus\templates\contact.html:25 .\appSalus\templates\home.html:472
+msgid "Rruga"
+msgstr "Street"
+
+#: .\appSalus\templates\base\footer.html:50
+msgid "LIDHJE"
+msgstr "RELATED"
+
+#: .\appSalus\templates\base\footer.html:52
+#: .\appSalus\templates\base\navbar.html:64
+msgid "Rreth Salus"
+msgstr "About Salus"
+
+#: .\appSalus\templates\base\footer.html:53
+#: .\appSalus\templates\base\navbar.html:65
+#: .\appSalus\templates\specialitet.html:16
+msgid "Specialitetet"
+msgstr "Departments"
+
+#: .\appSalus\templates\base\footer.html:54
+#: .\appSalus\templates\base\navbar.html:66
+#: .\appSalus\templates\mjeket.html:18
+msgid "Mjeket"
+msgstr "Doctors"
+
+#: .\appSalus\templates\base\footer.html:55
+msgid "Check Up"
+msgstr "Check-up"
+
+#: .\appSalus\templates\base\footer.html:56
+msgid "Artikujt Infomues"
+msgstr "Informative Articles"
+
+#: .\appSalus\templates\base\footer.html:61
+msgid "SHËRBIME SHTESË"
+msgstr "ADDITIONAL SERVICES"
+
+#: .\appSalus\templates\base\footer.html:63
+msgid "Qendra Aero-Mjekësore (AeMC)"
+msgstr "Aero-Medical Center (AeMC)"
+
+#: .\appSalus\templates\base\footer.html:64
+msgid "Optika Salus"
+msgstr "Salus Optics"
+
+#: .\appSalus\templates\base\footer.html:65
+msgid "Farmacia"
+msgstr "Pharmacy"
+
+#: .\appSalus\templates\base\footer.html:66
+msgid "Laborator Salus Qender"
+msgstr "Salus Center Laboratory"
+
+#: .\appSalus\templates\base\footer.html:67
+msgid "Klinika Salus Shkodër"
+msgstr "Salus Clinic Shkodër"
+
+#: .\appSalus\templates\base\footer.html:68
+msgid "Klinika Salus Durrës"
+msgstr "Salus Durrës Clinic"
+
+#: .\appSalus\templates\base\footer.html:75
+msgid "BASHKËPUNËTORËT"
+msgstr "ASSOCIATES"
+
+#: .\appSalus\templates\base\footer.html:77
+msgid "Klinika e Punës"
+msgstr "Labor Clinic"
+
+#: .\appSalus\templates\base\footer.html:78
+msgid "Otofon"
+msgstr "Otofon"
+
+#: .\appSalus\templates\base\footer.html:79
+msgid "Meditel"
+msgstr "Meditel"
+
+#: .\appSalus\templates\base\footer.html:80
+msgid "Aesthetic Salus"
+msgstr "Aesthetic Salus"
+
+#: .\appSalus\templates\base\footer.html:81
+msgid "Kompani Sigurimi"
+msgstr "Insurance company"
+
+#: .\appSalus\templates\base\footer.html:94
+msgid "Të gjitha të drejtat janë te rezervuara."
+msgstr "All rights are reserved."
+
+#: .\appSalus\templates\base\footer.html:98
+msgid "Politikat e Privatësisë"
+msgstr "Privacy Policies"
+
+#: .\appSalus\templates\base\navbar.html:60
+msgid "Kërko..."
+msgstr "Search..."
+
+#: .\appSalus\templates\base\navbar.html:67
+msgid "Check-up"
+msgstr "Check-up"
+
+#: .\appSalus\templates\base\navbar.html:68
+msgid "Karta e Shendetit"
+msgstr "Health card"
+
+#: .\appSalus\templates\base\navbar.html:69
+msgid "DONNA SALUS"
+msgstr "DONNA SALUS"
+
+#: .\appSalus\templates\base\navbar.html:70
+msgid "AeMC"
+msgstr "AeMC"
+
+#: .\appSalus\templates\base\navbar.html:71
+msgid "Artikuj Informues"
+msgstr "Informative Articles"
+
+#: .\appSalus\templates\base\navbar.html:72 .\appSalus\templates\home.html:458
+msgid "Kontakt"
+msgstr "Contact"
+
+#: .\appSalus\templates\base\navbar.html:81
+msgid "Lini një takimm"
+msgstr "Make an Appointment"
+
+#: .\appSalus\templates\base\navbar.html:121
+msgid "Lini një Takim"
+msgstr "Make an Appointment"
+
+#: .\appSalus\templates\base\navbar.html:128
+msgid "Vendos Emrin dhe Mbiemrin"
+msgstr "Enter First Name and Last Name"
+
+#: .\appSalus\templates\base\navbar.html:131
+#: .\appSalus\templates\home.html:503
+msgid "Vendos Email"
+msgstr "Enter Email"
+
+#: .\appSalus\templates\base\navbar.html:134
+msgid "Numri i telefonit"
+msgstr "Enter your phone number"
+
+#: .\appSalus\templates\base\navbar.html:139
+msgid "Specialiteti"
+msgstr "Department"
+
+#: .\appSalus\templates\base\navbar.html:142
+msgid "Mjeku"
+msgstr "Doctor"
+
+#: .\appSalus\templates\base\navbar.html:150
+msgid "Mesazh"
+msgstr "Message"
+
+#: .\appSalus\templates\base\navbar.html:153
+msgid "Lini Takimin"
+msgstr "Make the Appointment"
+
+#: .\appSalus\templates\contact.html:11 .\appSalus\templates\contact.html:12
+#: .\appSalus\templates\home.html:459
+msgid "Spitali SALUS Tiranë"
+msgstr "SALUS Hospital Tirana"
+
+#: .\appSalus\templates\contact.html:24 .\appSalus\templates\contact.html:100
+#: .\appSalus\templates\contact.html:169 .\appSalus\templates\home.html:471
+msgid "Vendodhja:"
+msgstr "Location:"
+
+#: .\appSalus\templates\contact.html:50 .\appSalus\templates\contact.html:124
+#: .\appSalus\templates\contact.html:191 .\appSalus\templates\contact.html:252
+#| msgid "Emër / Mbiemër"
+msgid "Emer Mbiemer"
+msgstr "Name  Surname"
+
+#: .\appSalus\templates\contact.html:53 .\appSalus\templates\contact.html:127
+#: .\appSalus\templates\contact.html:194 .\appSalus\templates\contact.html:255
+#: .\appSalus\templates\specialitet_detail.html:34
+msgid "Numër Telefoni"
+msgstr "Enter your phone number"
+
+#: .\appSalus\templates\contact.html:60 .\appSalus\templates\contact.html:134
+#: .\appSalus\templates\contact.html:201 .\appSalus\templates\contact.html:262
+#: .\appSalus\templates\specialitet_detail.html:38
+msgid "Shqetësimi juaj"
+msgstr "Your concern"
+
+#: .\appSalus\templates\contact.html:62 .\appSalus\templates\contact.html:136
+#: .\appSalus\templates\contact.html:203 .\appSalus\templates\contact.html:264
+#: .\appSalus\templates\home.html:508
+msgid "Dergo"
+msgstr "Submit"
+
+#: .\appSalus\templates\contact.html:87 .\appSalus\templates\contact.html:88
+msgid "Laboratori SALUS"
+msgstr "SALUS laboratory"
+
+#: .\appSalus\templates\contact.html:101
+msgid ""
+"Rruga Qemal Stafa 51, pranë shkollës Fan Noli, 100m mbi Ambulancën Qëndrore,"
+" Tiranë"
+msgstr ""
+"Road Qemal Stafa 51, near Fan Noli school, 100m above the Central Ambulance,"
+" Tirana"
+
+#: .\appSalus\templates\contact.html:156 .\appSalus\templates\contact.html:157
+msgid "Klinika DURRËS"
+msgstr "DURRËS Clinic"
+
+#: .\appSalus\templates\contact.html:170
+msgid ""
+"Lagjia nr.4, Rruga 7 Marsi Pallati Firma Valoti, Kulla I-rë, Pranë "
+"Drejtorisë së Hekurudhës, Durrës."
+msgstr ""
+"Neighborhood no. 4 Street 7 Marsi Valoti Firma Palace Tower I Near the "
+"Durres Railway Directorate."
+
+#: .\appSalus\templates\contact.html:217 .\appSalus\templates\contact.html:218
+#| msgid "Klinika Salus Durrës"
+msgid "Klinika Salus SHKODËR"
+msgstr "Salus SHKODËR Clinic"
+
+#: .\appSalus\templates\contact.html:230
+#| msgid "Vendodhja:"
+msgid "Vendodhja"
+msgstr "Location"
+
+#: .\appSalus\templates\contact.html:231
+msgid "Rruga 13 Dhjetori, Nr.19 pranë bashkisë Shkodër"
+msgstr "13 Djetori Street, No. 19 near Shkodër municipality"
+
+#: .\appSalus\templates\home.html:20
+msgid ""
+"Spitali Salus është një strukturë spitalore private italo-shqiptare,<br> "
+"multispecialistike që ofron shërbime shëndetësore ambulatoriale <br> dhe "
+"shtrimi për sëmundje me karakter mjekësor dhe kirurgjikal."
+msgstr ""
+"Salus Hospital is a private Italian-Albanian hospital structure,\n"
+"multispecialty that provides ambulatory health services\n"
+"and hospitalization for medical and surgical illnesses."
+
+#: .\appSalus\templates\home.html:58
+msgid "Check-upp"
+msgstr "Check-up"
+
+#: .\appSalus\templates\home.html:59
+msgid "Check up ne spitalin Salus."
+msgstr "Check up at Salus hospital."
+
+#: .\appSalus\templates\home.html:59
+msgid "Kliko per ofertat ne Spitalin Salus"
+msgstr "Click for offers at Salus Hospital"
+
+#: .\appSalus\templates\home.html:69
+msgid "Mjekët tane"
+msgstr "Our doctors"
+
+#: .\appSalus\templates\home.html:70
+msgid "Mjekët tanë në Spitalin Salus."
+msgstr "Our doctors at Salus Hospital."
+
+#: .\appSalus\templates\home.html:70
+msgid "Kliko per mjekët ne Spitalin Salus"
+msgstr "Click for doctors at Salus Hospital"
+
+#: .\appSalus\templates\home.html:81
+msgid "Departamentet "
+msgstr "Departments"
+
+#: .\appSalus\templates\home.html:82
+msgid "Departamentet ne spitalin Salus."
+msgstr "Departments in the Salus hospital."
+
+#: .\appSalus\templates\home.html:82
+msgid "Kliko per departamentet ne Spitalin Salus"
+msgstr "Click for departments in Salus Hospital"
+
+#: .\appSalus\templates\home.html:92
+msgid "Artikujt Informues"
+msgstr "Informative Articles"
+
+#: .\appSalus\templates\home.html:93
+msgid "Artikujt Informues ne spitalin Salus."
+msgstr "Informative Articles"
+
+#: .\appSalus\templates\home.html:93
+msgid "Kliko per artikujt ne Spitalin Salus"
+msgstr "Click for articles on Salus Hospital"
+
+#: .\appSalus\templates\home.html:129
+msgid "Rreth Saluss"
+msgstr "About Salus"
+
+#: .\appSalus\templates\home.html:130
+msgid ""
+"Shërbimet kryhen nga mjekë italianë dhe mjekë shqiptarë të formuar në Itali "
+"dhe në vende të ndryshme të Europës,sipas standardeve klinike ndërkombëtare,"
+" duke përdorur teknikat operatore më të sofistikuara, duke perdorur pajisje "
+"dhe mjete gjithnjë avangarde. Në këtë mënyrë, Spitali Salus i garanton "
+"pacientit një procedurë diagnostikimi të sigurt dhe trajtimi  efikas për çdo"
+" patologjie të hasur."
+msgstr ""
+"The services are performed by Italian doctors and Albanian doctors trained "
+"in Italy and in various European countries, according to international "
+"clinical standards, using the most sophisticated operative techniques, using"
+" always avant-garde equipment and tools. In this way, Salus Hospital "
+"guarantees the patient a safe diagnostic procedure and efficient treatment "
+"for any pathology encountered."
+
+#: .\appSalus\templates\home.html:145
+msgid "JETO SHENDETSHEM"
+msgstr "LIVE HEALTHY"
+
+#: .\appSalus\templates\home.html:146
+msgid ""
+"Për të qenë më pranë pacientëve, për t’ju siguruar një akses sa më të lehtë "
+"dhe shërbim të përsonalizuar, Spitali Salus ofron kartën e Besueshmërisë "
+"“inSalus”.Karta jonë e shëndetit është inovacioni më i fundit i shërbimeve "
+"shëndetësore në Spitalin SALUS."
+msgstr ""
+"To be closer to patients, to provide you with the easiest access and "
+"personalized service, Salus Hospital offers the \"inSalus\" Loyalty card. "
+"Our health card is the latest innovation of health services at SALUS "
+"Hospital."
+
+#: .\appSalus\templates\home.html:153
+msgid "ME KARTEN"
+msgstr "WITH THE CARD"
+
+#: .\appSalus\templates\home.html:154
+msgid ""
+"Duke u bërë anëtar i kartës InSALUS, shërbimet që ju përfitoni për shëndetin"
+" tuaj janë të një standarti të lartë."
+msgstr ""
+"By becoming a member of the InSALUS card, the services you receive for your "
+"health are of a high standard."
+
+#: .\appSalus\templates\home.html:160
+msgid "IN SALUS"
+msgstr "IN SALUS"
+
+#: .\appSalus\templates\home.html:161
+msgid ""
+"Nisur nga mjeku i dedikuar për shëndetin tuaj, me një përkujdesje të "
+"personalizuar për të parandaluar çdo patologji shëndetësore, diagnostikimi i"
+" sëmundjeve jetëkërcënuese e deri tek ndërhyrjet kirurgjikale."
+msgstr ""
+"Starting from the doctor dedicated to your health, with a personalized care "
+"to prevent any health pathology, diagnosis of life-threatening diseases up "
+"to surgical interventions."
+
+#: .\appSalus\templates\home.html:195
+msgid "Mjekët"
+msgstr "Doctors"
+
+#: .\appSalus\templates\home.html:195 .\appSalus\templates\home.html:204
+#: .\appSalus\templates\home.html:213 .\appSalus\templates\home.html:222
+msgid "në Spitalin SALUS"
+msgstr "at SALUS Hospital"
+
+#: .\appSalus\templates\home.html:196 .\appSalus\templates\home.html:205
+#: .\appSalus\templates\home.html:214 .\appSalus\templates\home.html:223
+msgid "Meso me shume"
+msgstr "Learn more"
+
+#: .\appSalus\templates\home.html:204
+msgid "Departamente"
+msgstr "Departments"
+
+#: .\appSalus\templates\home.html:213
+msgid "Laborator Biokimik"
+msgstr "Biochemical Laboratory"
+
+#: .\appSalus\templates\home.html:222
+msgid "Arritjet"
+msgstr "Achievement"
+
+#: .\appSalus\templates\home.html:256
+msgid "CHECK-UP"
+msgstr "CHECK-UP"
+
+#: .\appSalus\templates\home.html:264
+msgid "Check Up Kardiologjik"
+msgstr "Cardiology Check Up"
+
+#: .\appSalus\templates\home.html:265 .\appSalus\templates\home.html:275
+#: .\appSalus\templates\home.html:285 .\appSalus\templates\home.html:295
+#: .\appSalus\templates\home.html:305 .\appSalus\templates\home.html:315
+msgid "Kliko per ofertat"
+msgstr "Click for offers"
+
+#: .\appSalus\templates\home.html:274
+msgid "Paketa e varësisë patologjike"
+msgstr "The Pathological Addiction Package"
+
+#: .\appSalus\templates\home.html:284
+msgid "Check Up Okulistik"
+msgstr "Ophthalmic Check Up"
+
+#: .\appSalus\templates\home.html:294
+msgid "Skaner Trupi"
+msgstr "Body Scanner"
+
+#: .\appSalus\templates\home.html:304
+msgid "Paketat gjinekologjike"
+msgstr "Gynecological packages"
+
+#: .\appSalus\templates\home.html:314
+msgid "Check Up i përgjithshëm"
+msgstr "General Check Up"
+
+#: .\appSalus\templates\home.html:346
+msgid "MJEKËT"
+msgstr "Doctors"
+
+#: .\appSalus\templates\home.html:352
+msgid "Staf mjekësor i kualifikuar"
+msgstr "Qualified medical staff"
+
+#: .\appSalus\templates\home.html:353
+msgid ""
+"Struktura mjekesore përbehet nga mjekë italianë dhe shqiptarë të formuar në "
+"Itali e në vende të ndryshme të Europës, sipas standardeve klinike "
+"ndërkombëtare, duke përdorur teknikat operatore më të sofistikuara, të cilet"
+" respektojnë pacientin duke u mbështetur në pajisje dhe mjete gjithnjë "
+"avangarde. Mjeket tanë kujdesen që të ofrojnë shërbime shëndetësore mjaft "
+"komplekse dhe efikase shkencërisht të provuara, duke zënë në këtë fushë "
+"vendin e një strukture ekselence në territorin shqiptar.Mjeket tanë ofrojnë "
+"shërbime shëndetësore që synojnë të garantojnë parandalimin, diagnostikimin "
+"dhe riaftësimin e pacientit."
+msgstr ""
+"The medical structure consists of Italian and Albanian doctors trained in "
+"Italy and in various European countries, according to international clinical"
+" standards, using the most sophisticated operative techniques, which respect"
+" the patient, relying on always avant-garde equipment and tools. Our doctors"
+" take care to offer quite complex and efficient scientifically proven health"
+" services, taking the place of a structure of excellence in the Albanian "
+"territory in this field. Our doctors offer health services that aim to "
+"guarantee prevention, diagnosis and rehabilitation of the patient."
+
+#: .\appSalus\templates\home.html:495
+msgid "Vendos Emrin dhe Mbiemerin"
+msgstr "Enter First Name and Last Name"
+
+#: .\appSalus\templates\home.html:498
+msgid "Vendos Numbrin e Telefonit"
+msgstr "Enter your phone number"
+
+#: .\appSalus\templates\home.html:506
+msgid "Vendos Mesazh"
+msgstr "Enter your message"
+
+#: .\appSalus\templates\klinikaefertilizimit.html:10
+msgid "KLINIKA E FERTILIZIMIT"
+msgstr "FERTILIZATION CLINIC"
+
+#: .\appSalus\templates\klinikaefertilizimit.html:32
+msgid "Rreth Nesh"
+msgstr "About Us"
+
+#: .\appSalus\templates\klinikaefertilizimit.html:33
+msgid ""
+"Donna Salus është një klinikë që ofron kujdes mjekësor të nivelit më të "
+"lartë. Shërbimet tona mbulojnë një spektër të gjerë: nga këshillimi dhe "
+"vizitat tek mbështetja aktive në trajtimin e infertilitetit dhe "
+"diagnostikimin gjenetik. Ne punojmë në mënyrë transparente, precize, duke "
+"përdorur teknikat mjekësore më moderne dhe mbi të gjitha me një qasje "
+"absolutisht individuale ndaj pacientit."
+msgstr ""
+"Donna Salus is a clinic that offers the highest level of medical care. Our "
+"services cover a wide spectrum: from counseling and visits to active support"
+" in infertility treatment and genetic diagnosis. We work transparently, "
+"precisely, using the most modern medical techniques and above all with an "
+"absolutely individual approach to the patient."
+
+#: .\appSalus\templates\klinikaefertilizimit.html:34
+msgid ""
+"Ekipi i Klinikës të Fertilitetit Donna Salus përbëhet nga një staf italo-"
+"shqiptar me në krye mjekun e mirënjohur të mjekësisë riprodhuese, Dr. Bruno "
+"Engl, me eksperience 40 vjeçare, i cili prej vitit 2004 është drejtues "
+"mjekësor i spitaleve Brunico dhe San Candido, ku ndër të tjera është "
+"themelues i një nga qendrave kryesore të mjekësisë riprodhuese në Itali."
+msgstr ""
+"The Donna Salus Fertility Clinic team consists of an Italian-Albanian staff "
+"led by the well-known reproductive medicine doctor, Dr. Bruno Engl, with 40 "
+"years of experience, who since 2004 is the medical director of the Brunico "
+"and San Candido hospitals, where, among other things, he is the founder of "
+"one of the main reproductive medicine centers in Italy."
+
+#: .\appSalus\templates\mjeket.html:36
+msgid "Filtro 35 departamente"
+msgstr "Filter 35 departments"
+
+#: .\appSalus\templates\politikateprivatesise.html:15
+msgid "POLITIKAT E PRIVATËSISË"
+msgstr "PRIVACY POLICY"
+
+#: .\appSalus\templates\politikateprivatesise.html:16
+msgid "Pershkrimi privatesise"
+msgstr ""
+"Salus Hospital offers this website for educational and informational reasons, related to the services offered by the hospital.\n"
+"\n"
+"All published data and information are of informative character and Salus Hospital reserves the right to change them depending on the conditions and needs.\n"
+"Salus Hospital may decide at any time to suspend, modify or terminate the functionality of this site, respectively, due to maintenance work, to update or improve the site or any other reason including those beyond the reasonable control of Salus Hospital. The functionality of this site is entirely at the discretion of Salus Hospital.\n"
+"\n"
+"Please read the terms and conditions of use carefully before using this website.\n"
+"These terms and conditions of use are applicable to the website www.salus.al\n"
+"By using our website you fully accept these terms and conditions of use, without any reservation. In case you do not agree to any of the terms or conditions, then you should not use this website.\n"
+"\n"
+"All elements used on this site, including visual or audio elements, including basic technology, are protected by copyright, trademark or patent. They are the exclusive intellectual property of the company Salus Tirana sh.a. This site is used according to the General Conditions that are expressly defined here. The Client has the right to use this site only for his personal use and any copying, unauthorized use of the elements used on this site, their reproduction and / or republishing is prohibited.\n"
+"\n"
+"By accessing this site, you acknowledge that you are prohibited from using this site in any way that may be harmful, illegal or fraudulent. Salus Hospital is not responsible if, while navigating this site, you may encounter various problems due to lack of antivirus, firewall or outdated browser on your electronic device.\n"
+"\n"
+"Violation of these terms entitles Salus Hospital to deny you access to this site or for any other reason that Salus Hospital deems appropriate and necessary.\n"
+"\n"
+"The website www.salus.al will list the services from Salus hospital, according to the categories that the site offers with all the features that identify the service. We let you know about any concerns or complaints, questions, etc. regarding the services on this site, you will go to Salus Hospital, at 16 Vidhe Gjata Street, Mezes-Kashar.\n"
+"\n"
+"Software is used for electronic data. Medarchiver. The website www.salus.al is and will be in full compliance with Law 9887/2008 ‘On the protection of personal data’ Amended and relevant bylaws.\n"
+"\n"
+"If you have questions, complaints or remarks about these General Conditions or suggestions / questions about your online experience, please contact us at: either by e-mail: info@salus.al or at: +355 68 20 53 180"
+
+#: .\appSalus\templates\politikateprivatesise.html:17
+msgid "Last update 1 March 2022"
+msgstr "Last update 1 April 2024"
+
+#: .\appSalus\templates\specialitet_detail.html:26
+msgid "Rezervo Takim"
+msgstr "Book Appointment"
+
+#: .\appSalus\templates\specialitet_detail.html:30
+msgid "Emër / Mbiemër"
+msgstr "Name / Surname"
+
+#: .\appSalus\templates\specialitet_detail.html:31
+msgid "Shkruani emrin dhe mbiemrin e plotë."
+msgstr "Enter your full first and last name."
+
+#: .\appSalus\templates\specialitet_detail.html:35
+msgid "Shkruani numrin tuaj të telefonit."
+msgstr "Enter your phone number."
+
+#: .\appSalus\templates\specialitet_detail.html:39
+msgid "Shkruani shqetësimin që keni."
+msgstr "Write down the concern you have."
+
+#: .\appSalus\templates\specialitet_detail.html:41
+msgid "DËRGO KËRKESËN"
+msgstr "SEND REQUEST"
+
+#: .\appSalus\templates\translate.html:32
+msgid "Hello world! This is an HTML5 Boilerplate."
+msgstr "Hello World!This is an HTML5 Boilerplate"
+
+#: .\appSalus\views.py:221
+msgid "hello"
+msgstr " Hi"

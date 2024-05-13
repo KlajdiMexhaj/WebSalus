@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} hi {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="specialitet_detail">
+	<div class="container">
+        <h1><svg xmlns="http://www.w3.org/2000/svg" width="30" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 444.7 444.7" style="enable-background:new 0 0 444.7 444.7;" xml:space="preserve">
+            <style type="text/css">
+              .st0{fill:#1A355E;}
+            </style>
+            <path class="st0" d="M433.3,199.5v-46.7H293V12.5h-46.7v140.2h-46.7V12.5h-46.7v140.2H12.5v46.7h140.2v46.7H12.5V293h140.2v140.2  h46.7V293h46.7v140.2H293V293h140.2v-46.7H293v-46.7H433.3z M246.3,246.3h-46.7v-46.7h46.7V246.3z"></path>
+            </svg> {{ specialitet_detail.name}}</h1>
+          <p>{{ specialitet_detail.specialitet_pershkrimi |safe}}</p>
+          <p>{{ specialitet_detail.specialitet_serviset |safe}}</p>
+    </div>
+
+</div>
+
+<div class="contact_formspecialitet">
+		<div class="container">
+			<h2>{% trans "Rezervo Takim" %}</h2>
+			<form action="#" method="POST">
+        {% csrf_token %}
+				<div class="input-group">
+					<label for="name" >{% trans "Emër / Mbiemër" %}</label>
+					<input type="text" placeholder="{% trans 'Shkruani emrin dhe mbiemrin e plotë.' %}" id="name" name="fullname" required>
+				</div>
+				<div class="input-group">
+					<label for="number">{% trans "Numër Telefoni" %}</label>
+					<input type="tel" placeholder="{% trans 'Shkruani numrin tuaj të telefonit.' %}" id="number" name="tel" required>
+				</div>
+				<div class="input-group">
+					<label for="message">{% trans "Shqetësimi juaj" %}</label>
+					<textarea id="message"cols="60" rows="5" name="message" placeholder="{% trans 'Shkruani shqetësimin që keni.' %}" required></textarea>
+				</div>
+				<button type="submit" class="btn">{% trans "DËRGO KËRKESËN" %}</button>
+			</form>
+		</div>
+		</div>
+    <!-- <section id="appointment" class="appointment section-bg">
+      <div class="container">
+  
+          <div class="section-title">
+              <h2>Lini një Takim</h2>
+          </div>
+  
+          <form action="#" class="php-email-form" method="POST">
+              {% csrf_token %}
+              <div class="row">
+                  <div class="col-md-4 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Vendos Emrin dhe Mbiemrin">
+                  </div>
+                  <div class="col-md-4 form-group mt-3 mt-md-0">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Vendos Email">
+                  </div>
+                  <div class="col-md-4 form-group mt-3 mt-md-0">
+                      <input type="text" class="form-control" name="phone" id="phone" placeholder="Numri i telefonit">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-4 form-group mt-3">
+                      <input type="text" name="date" class="form-control datepicker" id="date" placeholder="Data e takimit">
+                  </div>
+                  <div class="col-md-4 form-group mt-3">
+                      <input type="text" name="age" class="form-control datepicker" id="age" placeholder="Mosha">
+                  </div>
+                  <div class="col-md-4 form-group mt-3">
+                      <input type="text" name="gender" class="form-control datepicker" id="gender" placeholder="Gjinia">
+                  </div>
+              </div>
+  
+              <div class="form-group mt-3">
+                  <textarea class="form-control" name="sms" rows="5" id="sms" placeholder="Mesazh"></textarea>
+              </div>
+              <div class="text-center">
+                  <button type="submit">Lini Takimin</button>
+              </div>
+          </form>
+  
+      </div>
+  </section> -->
+  
+<div class="grid-container">
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video1 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video2 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video3 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video4 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video5 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video6 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video7 'small' %}
+  </div>
+  <div class="klajdi">
+    {% video specialitet_detail.specialitet_video8 'small' %}
+  </div>
+</div>
+
+
+<br>
+
+
+
+{% endblock content %}

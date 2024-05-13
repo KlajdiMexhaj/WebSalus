@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %} Artikujt Informues {% endblock %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+
+<br><br>
+
+<div class="artikujtinfosingle">
+  <div class="container">
+    <h5>{% trans "Departmenti" %}: {{ artinfodetail.departamenti}}</h5>
+    <h1>{{ artinfodetail.name}}</h1>
+    <img src="{{ artinfodetail.image.url}}" alt="">
+    <p> {{ artinfodetail.art_description |safe}}</p>
+  </div>
+</div>  
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+{% endblock content%}
