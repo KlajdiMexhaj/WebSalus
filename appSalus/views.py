@@ -220,3 +220,48 @@ def navbar(request):
 def translate(request):
     trans = _('hello')
     return render(request,'translate.html', {'trans':trans})
+
+
+
+
+
+def search(request):
+    query = request.GET.get('q', '')
+
+    # Search in Mjeket
+    mjeket_results = Mjeket.objects.translated().filter(
+        Q(translations__name__icontains=query) |
+        Q(departamenti__translations__name__icontains=query)
+    ).distinct()
+
+    # Search in Specialitet
+    specialitet_results = Specialitet.objects.translated().filter(
+        Q(translations__name__icontains=query) |
+        Q(translations__specialitet_pershkrimi__icontains=query)
+    ).distinct()
+
+    # Search in Artikujtinformues
+    artikujtinformues_results = artikujtinformues.objects.translated().filter(
+        Q(translations__name__icontains=query) |
+        Q(translations__art_description__icontains=query) |
+        Q(departamenti__translations__name__icontains=query)
+    ).distinct()
+
+    context = {
+        'mjeket_results': mjeket_results,
+        'specialitet_results': specialitet_results,
+        'artikujtinformues_results': artikujtinformues_results,
+        'query': query,
+    }
+
+    return render(request, 'search_results.html', context)
+
+
+
+
+def albanostra(request):
+    videos = Video_AlbaNostra.objects.all()
+    artikujt_informuesAlbaNostra = artikujtinformuesAlbaNostra.objects.all()
+    context ={'videos': videos,'artikujt_informuesAlbaNostra': artikujt_informuesAlbaNostra}
+
+    return render (request,'albanostra.html',context)

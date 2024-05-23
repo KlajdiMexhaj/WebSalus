@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %}  {% endblock %}
+{% load static %}
+{% load embed_video_tags %}
+{% load i18n %}
+
+{% block content %}
+    <div class="container">
+       <br><br><br>
+        
+
+        <h2>Mjeket</h2>
+        <div class="row">
+            {% for mjeket in mjeket_results %}
+            <div class="col-md-4 py-3">
+                <div class="mjeket_all">
+                    <a href="{% url 'mjeket_detail' mjeket.id %}" class="card-link">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ mjeket.mjeket_image.url }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ mjeket.name }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ mjeket.departamenti.name }}</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No Mjeket found.</p>
+            {% endfor %}
+        </div>
+    <br><br>
+        <h2 style="font-weight: 800;">Specialitet</h2>
+        <div class="row">
+            {% for specialitet in specialitet_results %}
+            <div class="col-md-4 py-3">
+                <div class="specialitet_all">
+                    <a href="{% url 'specialitet_detail' specialitet.id %}" class="card-link">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ specialitet.specialitet_image.url }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ specialitet.name }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No Specialitet found.</p>
+            {% endfor %}
+        </div>
+    <br><br>
+        <h2>Artikujt Informues</h2>
+        <div class="row">
+            {% for artikull in artikujtinformues_results %}
+            <div class="col-md-4 py-3">
+                <div class="artikujtinformues_all">
+                    <a href="{% url 'artinfodetail' artikull.id %}" class="card-link">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ artikull.image.url }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ artikull.name }}</h5>
+                                <!-- <p class="card-text">{{ artikull.art_description | safe }}</p> -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No Artikujt Informues found.</p>
+            {% endfor %}
+        </div>
+{% endblock %}

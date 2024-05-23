@@ -215,6 +215,7 @@ class LiniTakim_salus(models.Model):
     specialiteti = models.CharField(max_length=50,blank=True,null=True)
     mjeku = models.CharField(max_length=50,blank=True)
     sms = models.TextField(max_length=2000,null=True,blank=True)
+    published_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.name
@@ -240,6 +241,27 @@ class Kontact_Salus_Laborator(models.Model):
         return self.name
     
 
+class Video_AlbaNostra(models.Model):
+    title = models.CharField(max_length=100,blank=True,null=True)
+    url = models.URLField(blank=True,null=True)
+
+    def __str__(self):
+        return self.title
 
 
+class artikujtinformuesAlbaNostra(TranslatableModel):
+    
+    
+    translations = TranslatedFields (
+    name= models.CharField(_('name'),max_length=100,blank=True,null=True),
+    art_description = RichTextField(_('art_description'),blank=True,null=True),
+    )
+    image = models.ImageField(upload_to='artikujtinformuesAlbaNostra/',blank=True,null=True)
+    
+    published_at = models.DateTimeField(default=timezone.now)
 
+    class Meta:
+        ordering = ['-published_at']
+
+    def __str__(self):
+        return self.name if self.name else "Unnamed ArtikujtinformuesAlbaNostra"

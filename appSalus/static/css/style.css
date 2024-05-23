@@ -48,6 +48,176 @@ WHATSAPP ON WEB
 
 
 
+
+/* 
+  ALBA NOSTRA
+*/
+.styled-paragraph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.styled-paragraph {
+  background: linear-gradient(135deg, #1A355E, #5959a6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.styled-paragraph p {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .styled-paragraph p {
+      font-size: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  .styled-paragraph p {
+      font-size: 0.9em;
+  }
+}
+
+
+
+
+#albanostra .container {
+  text-align: center;
+}
+
+#albanostra header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#albanostra a.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#albanostra a.button:hover {
+  background: linear-gradient(135deg, #0056b3, #007BFF);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #albanostra header h1 {
+      font-size: 2rem;
+  }
+
+  #albanostra a.button {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #albanostra header h1 {
+      font-size: 1.5rem;
+  }
+
+  #albanostra a.button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+}
+
+/*
+Review Pacientesh
+*/
+
+
+#review h1 {
+  color: #333;
+  margin: 20px 0;
+  text-align: center;
+}
+#review .videos-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#review #videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; /* Adequate space between videos */
+  padding: 20px;
+  width: 95%;
+
+  justify-items: center;
+}
+#review .video-container {
+  background-color: #fff;
+  padding: 15px; /* Balanced padding */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%;
+  margin-right: 30px;
+   /* Slightly larger video containers */
+}
+#review iframe {
+  width: 90%;
+  height: 200px; /* Increased height */
+  border: none;
+  border-radius: 8px;
+}
+#review .video-title {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #555;
+}
+@media (max-width: 1400px) {
+  #review #videos {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  #review #videos {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  #review #videos {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
  All  Mjekjet Section
 */
@@ -2538,72 +2708,7 @@ object-fit: contain;
   text-decoration: none;
 }
 
-/*
- .parent .card{
-  width:auto;
-  height: 250px; 
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  padding: 0;
-  align-items: flex-end; 
-  border: transparent;
-}
-.parent .card::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0; 
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom,rgba(255, 0, 140, 0.33), rgba(215, 19, 127, 0.634));
-  z-index: 2;
-  opacity: 0;
-  transition: 0.5s all;
-  border-radius: 20px;
-}
-.parent .card:hover::before{
-  opacity: 1;
-}
-.parent .card img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 20px;
-  
-}
-.parent .card .card-body{
-  position: relative;
-  color: #fff;
-  z-index: 3;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.5s all;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 21px;
-}
-.parent .card:hover .card-body{
-  opacity: 1;
-  transform: translateY(0);
-  
-}
-.parent .card .card-body h5{
-  line-height: 40px;
-  margin-bottom: 10px;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  
-}
-.parent .card .card-body p{
-  font-size: 15px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-} */
+
 @media (max-width:768px) {
   .parent{
     grid-template-columns: repeat(2,1fr);

@@ -45,7 +45,13 @@ admin.site.register(artikujtinformuesAeMC, TranslatableAdmin)
 admin.site.register(artikujtinformuesKartaInSalus, TranslatableAdmin)
 admin.site.register(artikujtinformuesDonnaSalus, TranslatableAdmin)
 admin.site.register(Kontakt_Salus)
-admin.site.register(LiniTakim_salus)
+class LiniTakim_salus_admin(admin.ModelAdmin):
+    list_display = ['name','published_at']
+    list_display_links = ['name','published_at']
+admin.site.register(LiniTakim_salus,LiniTakim_salus_admin)
 admin.site.register(Kontact_Salus_Tirana)
 admin.site.register(Kontact_Salus_Laborator)
+admin.site.register(Video_AlbaNostra)
+admin.site.register(artikujtinformuesAlbaNostra, TranslatableAdmin)
+
 
