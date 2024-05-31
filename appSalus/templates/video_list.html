@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% block title %}  {% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="review" id="review">
+<h1>Review Pacienti</h1>
+
+    <div id="videos">
+        {% for video in videos %}
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/{{ video.url|cut:'https://www.youtube.com/watch?v=' }}" allowfullscreen></iframe>
+                <div class="video-title">{{ video.title }}</div>
+            </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endblock content %}

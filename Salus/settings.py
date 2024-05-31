@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 import os
-from pathlib import Path 
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,13 +26,13 @@ SECRET_KEY = 'django-insecure-3q(q@g0wn@z9tf3kic_7#zgkp+$&vb)iit_s$$$m!ivsn$=sdq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.10.215']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'modeltranslation',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'appSalus',
     'rosetta',
     'parler',
+
 ]
 
 MIDDLEWARE = [
@@ -127,9 +128,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
-ALLOWED_HOSTS = ['192.168.10.215']
+STATIC_ROOT = '/home/SalusWeb/WebSalus/static'
+
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
@@ -142,15 +144,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = (
-    ('sq', _('Albanian')), 
-    ('en', _('English')), 
+    ('sq', _('Albanian')),
+    ('en', _('English')),
     ('it', _('Italy')),
 )
 PARLER_LANGUAGES = {
     None : (
         {'code': 'sq',},
         {'code': 'en',},
-        
+
         {'code': 'it',},
     ),
     'default': {
@@ -161,4 +163,6 @@ PARLER_LANGUAGES = {
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
+
+TRANSLATABLE_MODEL_MODULES = ['appSalus.models']
 
