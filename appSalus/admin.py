@@ -52,6 +52,7 @@ admin.site.register(LiniTakim_salus,LiniTakim_salus_admin)
 admin.site.register(Kontact_Salus_Tirana)
 admin.site.register(Kontact_Salus_Laborator)
 admin.site.register(Video_AlbaNostra)
+admin.site.register(Video)
 admin.site.register(artikujtinformuesAlbaNostra, TranslatableAdmin)
 
 

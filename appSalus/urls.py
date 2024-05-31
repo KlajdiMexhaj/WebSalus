@@ -28,6 +28,10 @@ urlpatterns = [
     path("navbar/",views.navbar,name="navbar"),
     path("translate/",views.translate,name="translate"),
     path('set_language/', set_language, name='set_language'),  # Language switcher URL
+    path('videos/', views.video_list, name='video_list'),
     path('search/', views.search, name='search'),
-    path("albanostra/",views.albanostra, name="albanostra"),
+
+
+
+
 ]
