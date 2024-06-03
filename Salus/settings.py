@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +22,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3q(q@g0wn@z9tf3kic_7#zgkp+$&vb)iit_s$$$m!ivsn$=sdq'
+SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = ['192.168.10.215']
 
@@ -41,10 +52,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'embed_video',
     'ckeditor',
+    'ckeditor_uploader',
     'appSalus',
     'rosetta',
     'parler',
+    
 
+
+
+    'admin_honeypot',
+    'defender',
 ]
 
 MIDDLEWARE = [
@@ -56,10 +73,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'defender.middleware.FailedLoginMiddleware',
 ]
 
 ROOT_URLCONF = 'Salus.urls'
-
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 TEMPLATES = [
     {
@@ -110,6 +129,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
+
+
+
+DEFENDER_REDIS_URL = 'redis://localhost:6379/0'
+
+
+
+
 
 
 # Internationalization
