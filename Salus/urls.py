@@ -24,10 +24,21 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
+    path('wp-salus-admin/defender/', include('defender.urls')), # defender admin
+
+    # Admin page honeypot
+
+    path('admin/', include('admin_honeypot.urls')),
+
+    #Our actual admin page
+    
+    path('wp-salus-admin/', admin.site.urls),
+    
+    
     path('rosetta/', include('rosetta.urls')),
     
-    
+    path('ckeditor5/', include('django_ckeditor_5.urls')),
 ]
 
 urlpatterns += i18n_patterns(

@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 from embed_video.fields import EmbedVideoField
-from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from parler.models import TranslatableModel, TranslatedFields
@@ -31,8 +31,8 @@ class Mjeket (TranslatableModel):
     departamenti= models.ForeignKey(Departamenti, related_name=_('mjeket_departamenti'), on_delete=models.SET_NULL,blank=True,null=True)
     translations= TranslatedFields(
     name = models.CharField(_('name'),max_length=100, blank=True,null=True),
-    mjeket_arsimi = RichTextField(_('mjeket_arsimi'),blank=True,null=True),
-    mjeket_punesimi = RichTextField(_('mjeket_punesimi'), blank=True,null=True),
+    mjeket_arsimi = CKEditor5Field(_('mjeket_arsimi'),blank=True,null=True),
+    mjeket_punesimi = CKEditor5Field(_('mjeket_punesimi'), blank=True,null=True),
     )
     mjeket_image = models.ImageField(upload_to='mjeket/', blank=True,null=True)
     mjeket_video = EmbedVideoField( blank=True,null=True)
@@ -46,8 +46,8 @@ class Mjeket (TranslatableModel):
 class Specialitet (TranslatableModel):
     translations= TranslatedFields(
     name = models.CharField(max_length=100, blank=True,null=True),
-    specialitet_pershkrimi = RichTextField(blank=True,null=True),
-    specialitet_serviset = RichTextField( blank=True,null=True),
+    specialitet_pershkrimi = CKEditor5Field(blank=True,null=True),
+    specialitet_serviset = CKEditor5Field( blank=True,null=True),
     )
     specialitet_image = models.ImageField(upload_to='specialitet', blank=True,null=True)
     
@@ -87,8 +87,8 @@ class CheckUp (models.Model):
 class About (TranslatableModel):
     about_img = models.ImageField(upload_to='aboutus')
     translations = TranslatedFields (
-    about_pershkrimi = RichTextField( blank=True,null=True),
-    about_oltipershkrimi = RichTextField( blank=True,null=True),
+    about_pershkrimi = CKEditor5Field( blank=True,null=True),
+    about_oltipershkrimi = CKEditor5Field( blank=True,null=True),
     )
     about_imgambjeti = models.ImageField(upload_to='aboutus', blank=True,null=True)
 
@@ -106,7 +106,7 @@ class Foto (models.Model):
 class KlinikaFerti(TranslatableModel):
     translations= TranslatedFields(
     klinika_name=models.CharField(max_length= 100, blank=True,null=True),
-    klinika_description= RichTextField(blank=True,null=True),
+    klinika_description= CKEditor5Field(blank=True,null=True),
     )
     klinika_img = models.ImageField(upload_to='klinikafer',blank=True,null=True)
     
@@ -119,8 +119,8 @@ class KlinikaFerti(TranslatableModel):
 
 class AeMC(TranslatableModel):
     translations= TranslatedFields(
-    AeMC_text = RichTextField(blank=True,null=True),
-    AeMC_CV = RichTextField(blank = True,null=True),
+    AeMC_text = CKEditor5Field(blank=True,null=True),
+    AeMC_CV = CKEditor5Field(blank = True,null=True),
 )
 
 
@@ -132,7 +132,7 @@ class artikujtinformues(TranslatableModel):
     departamenti= models.ForeignKey(Departamenti, related_name=_('departamenti'), on_delete=models.SET_NULL,blank=True,null=True)
     translations = TranslatedFields (
     name= models.CharField(_('name'),max_length=100,blank=True,null=True),
-    art_description = RichTextField(_('art_description'),blank=True,null=True),
+    art_description = CKEditor5Field(_('art_description'),blank=True,null=True),
     )
     image = models.ImageField(upload_to='artikujtinformues/',blank=True,null=True)
     
@@ -149,7 +149,7 @@ class artikujtinformues(TranslatableModel):
 class artikujtinformuesAeMC(TranslatableModel):
     translations = TranslatedFields (
     name = models.CharField( max_length=100, blank=True, null=True),
-    artAeMC = RichTextField( blank=True, null=True),
+    artAeMC = CKEditor5Field( blank=True, null=True),
     )
     image = models.ImageField(upload_to='artikujtinformuesAeMC/', blank=True, null=True)
 
@@ -169,7 +169,7 @@ class artikujtinformuesAeMC(TranslatableModel):
 class artikujtinformuesKartaInSalus(TranslatableModel):
     translations = TranslatedFields(
     name = models.CharField(_('name'),max_length=100,blank=True,null=True),
-    art_KartaInSalus = RichTextField(_('art_KartaInSalus'),blank=True,null=True),
+    art_KartaInSalus = CKEditor5Field(_('art_KartaInSalus'),blank=True,null=True),
     )
     image = models.ImageField(upload_to="artikujtinformuesKartaInSalus/",blank=True,null=True)
     published_at = models.DateTimeField(default=timezone.now)
@@ -185,7 +185,7 @@ class artikujtinformuesKartaInSalus(TranslatableModel):
 class artikujtinformuesDonnaSalus(TranslatableModel):
     translations = TranslatedFields(
     name = models.CharField(max_length=100,blank=True,null=True),
-    art_DonnaSalus = RichTextField(blank=True,null=True),
+    art_DonnaSalus = CKEditor5Field(blank=True,null=True),
     )
     image = models.ImageField(upload_to='artikujtinformuesDonnaSalus/',blank=True,null=True)
     
@@ -254,7 +254,7 @@ class artikujtinformuesAlbaNostra(TranslatableModel):
     
     translations = TranslatedFields (
     name= models.CharField(_('name'),max_length=100,blank=True,null=True),
-    art_description = RichTextField(_('art_description'),blank=True,null=True),
+    art_description = CKEditor5Field(_('art_description'),blank=True,null=True),
     )
     image = models.ImageField(upload_to='artikujtinformuesAlbaNostra/',blank=True,null=True)
     
