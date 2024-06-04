@@ -196,3 +196,10 @@ LOCALE_PATHS = [
 
 TRANSLATABLE_MODEL_MODULES = ['appSalus.models']
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 300,
+    },
+}
