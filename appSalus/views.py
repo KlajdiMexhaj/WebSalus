@@ -180,6 +180,9 @@ def artikujt_informuesDonnaSalus(request,pk):
 
 
 
+
+
+
 def artinfodetail(request,pk):
     artinfodetail= artikujtinformues.objects.get(id=pk)
     context = {"artinfodetail":artinfodetail}
@@ -254,3 +257,16 @@ def search(request):
 
     return render(request, 'search_results.html', context)
 
+
+def albanostra(request):
+    artikujt_informuesAlbaNostra = artikujtinformuesAlbaNostra.objects.all()
+    prof_albanostramjeket = Mjeket.objects.filter(Q(translations__name__istartswith='Dr.Eneida Bozaxhiu') | 
+                                                  Q(translations__name__istartswith='Dr. Taulant Pengili')|
+                                                  Q(translations__name__istartswith='Msc. Hyrida Basha') |
+                                                  Q(translations__name__istartswith='Englantina Mersini') |
+                                                  Q(translations__name__istartswith='Dr. Julian Drace')
+                                                  ).distinct()
+    albanostra_txt = AlbaNostra.objects.all()
+    checkup_Albanostra=checkup_albanostra.objects.all()
+    context = {"artikujt_informuesAlbaNostra":artikujt_informuesAlbaNostra,"albanostra_txt":albanostra_txt,"prof_albanostramjeket":prof_albanostramjeket,"checkup_Albanostra":checkup_Albanostra}
+    return render (request,'AlbaNostra.html',context)

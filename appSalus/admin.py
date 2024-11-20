@@ -27,7 +27,7 @@ admin.site.register(About, TranslatableAdmin)
 admin.site.register(Foto)
 admin.site.register(KlinikaFerti, TranslatableAdmin)
 admin.site.register(AeMC, TranslatableAdmin)
-
+admin.site.register(AlbaNostra,TranslatableAdmin)
 class ArtikujtAdmin(admin.ModelAdmin):
      list_filter = ['departamenti']
      list_display = ['name','departamenti']
@@ -44,6 +44,7 @@ admin.site.register(artikujtinformues,ArtikujtInformuesAdmin)
 admin.site.register(artikujtinformuesAeMC, TranslatableAdmin)
 admin.site.register(artikujtinformuesKartaInSalus, TranslatableAdmin)
 admin.site.register(artikujtinformuesDonnaSalus, TranslatableAdmin)
+
 admin.site.register(Kontakt_Salus)
 class LiniTakim_salus_admin(admin.ModelAdmin):
     list_display = ['name','published_at']
@@ -54,5 +55,5 @@ admin.site.register(Kontact_Salus_Laborator)
 admin.site.register(Video_AlbaNostra)
 admin.site.register(Video)
 admin.site.register(artikujtinformuesAlbaNostra, TranslatableAdmin)
-
+admin.site.register(checkup_albanostra)
 

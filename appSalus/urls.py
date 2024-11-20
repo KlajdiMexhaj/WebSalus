@@ -30,8 +30,9 @@ urlpatterns = [
     path('set_language/', set_language, name='set_language'),  # Language switcher URL
     path('videos/', views.video_list, name='video_list'),
     path('search/', views.search, name='search'),
-
-
+    path('albanostra/',views.albanostra,name='albanostra'),
+    path('artikujt_infomuesAlbaNostra/',views.albanostra,name='artikujt_infomuesAlbaNostra'),
+    path('checkup_albanostra/',views.albanostra,name='checkup_albanostra'),
 
 
 ]

@@ -199,6 +199,8 @@ class artikujtinformuesDonnaSalus(TranslatableModel):
     
 
 
+
+
 class Kontakt_Salus(models.Model):
     fullname = models.CharField(max_length=50,blank=True,null=True)
     number = models.CharField(max_length=50,blank=True,null=True)
@@ -266,6 +268,10 @@ class artikujtinformuesAlbaNostra(TranslatableModel):
     def __str__(self):
         return self.name if self.name else "Unnamed ArtikujtinformuesAlbaNostra"
     
+class AlbaNostra(TranslatableModel):
+    translations= TranslatedFields(
+    albanostra_text = CKEditor5Field(blank=True,null=True),
+)
 
 
 class Video(models.Model):
@@ -274,3 +280,7 @@ class Video(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class checkup_albanostra (models.Model):
+    checkup_albanostra_img = models.ImageField(upload_to="checkup_albanostra", blank=True,null=True)
