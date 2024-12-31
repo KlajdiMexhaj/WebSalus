@@ -32,7 +32,6 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,15 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video',
-    'ckeditor',
-    'ckeditor_uploader',
+    'django_ckeditor_5',  # Using django-ckeditor-5
     'appSalus',
     'rosetta',
     'parler',
-    'django_ckeditor_5',
-
-
-
     'admin_honeypot',
     'defender',
 ]
@@ -185,10 +179,33 @@ LOCALE_PATHS = [
 
 TRANSLATABLE_MODEL_MODULES = ['appSalus.models']
 
-CKEDITOR_CONFIGS = {
+# CKEDITOR_5_CONFIGS
+CKEDITOR_5_CONFIGS = {
     'default': {
-        'toolbar': 'full',
-        'height': 300,
-        'width': 300,
+        'toolbar': [
+            'heading', '|', 'bold', 'italic', 'underline', 'strikethrough',
+            'link', 'bulletedList', 'numberedList', 'blockQuote', '|',
+            'alignment', 'fontColor', 'fontBackgroundColor', 'removeFormat',
+            '|', 'insertTable', 'mediaEmbed', 'undo', 'redo'
+        ],
+        'height': '300px',
+        'width': '100%',
+        'fontColor': {
+            'colors': [
+                {
+                    'color': 'black',
+                    'label': 'Black'
+                }
+            ],
+            'defaultColor': 'black'
+        },
+        'styles': [
+            {
+                'element': 'p',
+                'styles': {
+                    'color': 'black'
+                }
+            }
+        ]
     },
 }
