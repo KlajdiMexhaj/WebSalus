@@ -14,7 +14,6 @@ import os
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,13 +24,28 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_random_secret_key()
 
-# Set DEBUG to False for production
-DEBUG = True
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+
+ALLOWED_HOSTS = ['salus.al','www.salus.al']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,15 +53,21 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video',
-    'django_ckeditor_5',  # Using django-ckeditor-5
     'appSalus',
     'rosetta',
     'parler',
-    'admin_honeypot',
-    'defender',
+    'django_ckeditor_5',
+
+
+
 ]
 
+
+
+
+
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
@@ -57,7 +77,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'defender.middleware.FailedLoginMiddleware',
 ]
 
 ROOT_URLCONF = 'Salus.urls'
@@ -118,12 +137,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
-DEFENDER_REDIS_URL = 'redis://localhost:6379/0'
-
-
-
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -143,11 +156,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/home/SalusWeb/WebSalus/appSalus/static/css/'
+STATIC_ROOT = '/home/oltip/WebSalus/appSalus/static'
 
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_ROOT = '/home/oltip/WebSalus/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -179,33 +192,12 @@ LOCALE_PATHS = [
 
 TRANSLATABLE_MODEL_MODULES = ['appSalus.models']
 
-# CKEDITOR_5_CONFIGS
-CKEDITOR_5_CONFIGS = {
+CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': [
-            'heading', '|', 'bold', 'italic', 'underline', 'strikethrough',
-            'link', 'bulletedList', 'numberedList', 'blockQuote', '|',
-            'alignment', 'fontColor', 'fontBackgroundColor', 'removeFormat',
-            '|', 'insertTable', 'mediaEmbed', 'undo', 'redo'
-        ],
-        'height': '300px',
-        'width': '100%',
-        'fontColor': {
-            'colors': [
-                {
-                    'color': 'black',
-                    'label': 'Black'
-                }
-            ],
-            'defaultColor': 'black'
-        },
-        'styles': [
-            {
-                'element': 'p',
-                'styles': {
-                    'color': 'black'
-                }
-            }
-        ]
+        'toolbar': 'full',
+        'height': 300,
+        'width': 300,
     },
 }
+
+

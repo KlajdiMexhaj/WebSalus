@@ -29,16 +29,18 @@ admin.site.register(KlinikaFerti, TranslatableAdmin)
 admin.site.register(AeMC, TranslatableAdmin)
 admin.site.register(AlbaNostra,TranslatableAdmin)
 class ArtikujtAdmin(admin.ModelAdmin):
-     list_filter = ['departamenti']
-     list_display = ['name','departamenti']
-     list_display = ['name','departamenti']
-     search_fields = ['name']
-     
-     
+    list_filter = ['departamenti']
+    list_display = ['get_name', 'departamenti']
+    search_fields = ['translations__name', 'translations__art_description']
+
+    def get_name(self, obj):
+        return obj.name
+    get_name.short_description = 'Name'
 
 class ArtikujtInformuesAdmin(ArtikujtAdmin, TranslatableAdmin):
     pass
-admin.site.register(artikujtinformues,ArtikujtInformuesAdmin)
+
+admin.site.register(artikujtinformues, ArtikujtInformuesAdmin)
 
 
 admin.site.register(artikujtinformuesAeMC, TranslatableAdmin)
